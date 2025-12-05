@@ -1,9 +1,12 @@
+import Home from './pages/Home'
+import './index.css'
+
 function App() {
   return (
     <div className="app">
-      <h1>Assalamu Alaikum</h1>
-      <h1>Welcome to Learnify</h1>
-      <p>Country's number one E-Learning Platform</p>
+      <div className="container">
+        <Home />
+      </div>
     </div>
   )
 }
