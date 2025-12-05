@@ -916,3 +916,239 @@ body {
   background: #2563eb;
   transform: translateY(-2px);
 }
+
+/* Order Page */
+.order-page {
+  padding: 30px 0;
+}
+
+.order-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.order-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.order-summary {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.order-summary h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.course-summary {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 4px solid #3b82f6;
+}
+
+.course-summary-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.course-summary p {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.course-summary-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #10b981;
+  margin-top: 15px;
+  text-align: right;
+}
+
+.student-info {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.student-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.student-info p {
+  color: #475569;
+  margin-bottom: 8px;
+  padding-left: 15px;
+}
+
+.student-info strong {
+  color: #334155;
+  margin-right: 8px;
+}
+
+.payment-methods {
+  margin-bottom: 25px;
+}
+
+.payment-methods h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.payment-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #3b82f6;
+}
+
+.payment-option span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.order-terms {
+  margin: 25px 0;
+  padding: 20px;
+  background: #fef3c7;
+  border-radius: 10px;
+  border-left: 4px solid #f59e0b;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #3b82f6;
+  margin-top: 3px;
+}
+
+.terms-checkbox span {
+  color: #7c2d12;
+  font-weight: 500;
+}
+
+.order-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.back-button {
+  background: white;
+  color: #64748b;
+  border: 2px solid #e2e8f0;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateX(-5px);
+}
+
+.confirm-button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.order-help {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.order-help h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.order-help p {
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+}
+
+.loading-container p {
+  margin-top: 15px;
+  color: #64748b;
+  font-size: 1.1rem;
+}

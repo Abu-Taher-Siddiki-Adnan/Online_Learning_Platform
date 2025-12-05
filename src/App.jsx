@@ -7,6 +7,7 @@ import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import CourseDetails from './pages/CourseDetails'
 import NotFound from './pages/NotFound'
+import OrderPage from './pages/OrderPage'
 import './index.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/course/:id" element={<CourseDetails />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/order/:courseId" element={<OrderPage />} />
             </Routes>
           </div>
         </main>
