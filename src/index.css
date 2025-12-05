@@ -239,12 +239,6 @@ body {
   color: white;
 }
 
-.logo-sub {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #93c5fd;
-}
-
 .navbar-menu {
   display: flex;
   gap: 30px;
@@ -525,4 +519,393 @@ body {
 
 .auth-link a:hover {
   text-decoration: underline;
+}
+
+/* Dashboard Page */
+.dashboard-page {
+  padding: 20px 0;
+}
+
+.dashboard-header {
+  margin-bottom: 40px;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card-title {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stat-card-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #3b82f6;
+}
+
+.dashboard-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.course-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-item {
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-title {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.progress-percent {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 4px;
+}
+
+/* Course Details Page */
+.course-details-page {
+  padding: 20px 0;
+}
+
+.course-details-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 15px;
+  padding: 40px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.course-details-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.course-details-description {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 700px;
+}
+
+.course-price-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 180px;
+  text-align: center;
+}
+
+.course-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.meta-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.meta-value {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.course-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  .course-content-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.learning-section,
+.syllabus-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.learning-section h2,
+.syllabus-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.learning-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.learning-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.point-check {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.syllabus-item {
+  border: 1px solid #e2e8f0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.syllabus-item:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.enrollment-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.enrollment-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.enrollment-summary {
+  margin-bottom: 25px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item .price {
+  font-weight: 700;
+  color: #10b981;
+  font-size: 1.2rem;
+}
+
+.enroll-button,
+.wishlist-button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.enroll-button {
+  background: #10b981;
+  color: white;
+  border: none;
+}
+
+.enroll-button:hover {
+  background: #059669;
+}
+
+.wishlist-button {
+  background: white;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+
+.wishlist-button:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.course-features {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.features-title {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.feature-list {
+  list-style: none;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #64748b;
+}
+
+.feature-check {
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* 404 Page */
+.not-found-container {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.not-found-title {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #3b82f6;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.not-found-subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.not-found-description {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.home-button {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
 }

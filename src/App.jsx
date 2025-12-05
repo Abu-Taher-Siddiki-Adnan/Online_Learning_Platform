@@ -4,6 +4,9 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Dashboard from './pages/Dashboard'
+import CourseDetails from './pages/CourseDetails'
+import NotFound from './pages/NotFound'
 import './index.css'
 
 function App() {
@@ -17,6 +20,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/course/:id" element={<CourseDetails />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </main>
