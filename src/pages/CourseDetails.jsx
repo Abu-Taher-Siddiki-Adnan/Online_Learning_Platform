@@ -1,13 +1,14 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from "react-router-dom";
 
 const CourseDetails = () => {
-  const { id } = useParams()
-  
+  const { id } = useParams();
+
   // Mock course data
   const course = {
     id: id || 1,
     title: "React Fundamentals",
-    description: "Learn React from scratch with hands-on projects. This comprehensive course covers everything from basic JSX to advanced state management.",
+    description:
+      "Learn React from scratch with hands-on projects. This comprehensive course covers everything from basic JSX to advanced state management.",
     price: 49.99,
     duration: "8 weeks",
     level: "Beginner",
@@ -20,7 +21,7 @@ const CourseDetails = () => {
       "Learn React Hooks (useState, useEffect)",
       "Build responsive React applications",
       "Implement routing with React Router",
-      "Connect React apps to APIs"
+      "Connect React apps to APIs",
     ],
     syllabus: [
       "Week 1: Introduction to React",
@@ -30,9 +31,9 @@ const CourseDetails = () => {
       "Week 5: Routing with React Router",
       "Week 6: API Integration",
       "Week 7: State Management",
-      "Week 8: Final Project"
-    ]
-  }
+      "Week 8: Final Project",
+    ],
+  };
 
   return (
     <div className="course-details-page">
@@ -47,7 +48,7 @@ const CourseDetails = () => {
             <div className="price-label">One-time payment</div>
           </div>
         </div>
-        
+
         <div className="course-meta">
           <div className="meta-item">
             <span className="meta-label">Duration</span>
@@ -115,15 +116,13 @@ const CourseDetails = () => {
               <span>{course.level}</span>
             </div>
           </div>
-          
-          <button className="enroll-button">
+
+          <Link to={`/order/${course.id}`} className="enroll-button">
             Enroll Now
-          </button>
-          
-          <button className="wishlist-button">
-            Add to Wishlist
-          </button>
-          
+          </Link>
+
+          <button className="wishlist-button">Add to Wishlist</button>
+
           <div className="course-features">
             <h4 className="features-title">This course includes:</h4>
             <ul className="feature-list">
@@ -148,7 +147,7 @@ const CourseDetails = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CourseDetails
+export default CourseDetails;
