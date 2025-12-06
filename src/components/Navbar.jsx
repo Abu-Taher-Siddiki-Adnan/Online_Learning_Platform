@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { useAuth } from "../context/AuthContext";
 import AuthButtons from "./AuthButtons";
 
@@ -31,31 +32,33 @@ const Navbar = () => {
               Dashboard
             </Link>
           )}
-          <Link to="#" className="navbar-link">
+          <HashLink
+            to="/#courses-section"
+            className="navbar-link"
+            scroll={(el) =>
+              el.scrollIntoView({ behavior: "smooth", block: "start" })
+            }
+          >
             Courses
-          </Link>
-          <Link to="#" className="navbar-link">
-            About
-          </Link>
+          </HashLink>
         </div>
 
         {currentUser ? (
           <div className="user-menu">
             <div className="user-info">
-              <div>
-                <span className="user-name">
-                  {currentUser.displayName || currentUser.email}
-                </span>
-              </div>
-              <div>
-                <button onClick={handleLogout} className="logout-btn">
-                  Logout
-                </button>
-              </div>
+              <span className="user-name">
+                {currentUser.displayName || currentUser.email}
+              </span>
+              <button onClick={handleLogout} className="logout-btn">
+                Logout
+              </button>
             </div>
           </div>
         ) : (
-          <AuthButtons />
+          <div className="auth-buttons">
+            {" "}
+            <AuthButtons />
+          </div>
         )}
       </div>
     </nav>

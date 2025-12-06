@@ -1,4 +1,6 @@
 import CourseCard from '../components/CourseCard'
+import { fetchCourses } from '../utils/api';
+import { useState, useEffect } from 'react';
 
 const Home = () => {
 
@@ -64,7 +66,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="courses-section">
+      <section className="courses-section" id="courses-section">
         <h2 className="section-title">Featured Courses</h2>
         <div className="courses-grid">
           {courses.map(course => (

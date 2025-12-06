@@ -1,50 +1,60 @@
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { fetchCourseById } from "../utils/api";
 
 const CourseDetails = () => {
   const { id } = useParams();
+  const [course, setCourse] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Mock course data
-  const course = {
-    id: id || 1,
-    title: "React Fundamentals",
-    description:
-      "Learn React from scratch with hands-on projects. This comprehensive course covers everything from basic JSX to advanced state management.",
-    price: 49.99,
-    duration: "8 weeks",
-    level: "Beginner",
-    instructor: "John Doe",
-    rating: 4.8,
-    students: 1500,
-    learningPoints: [
-      "Understand React components and JSX",
-      "Master state and props management",
-      "Learn React Hooks (useState, useEffect)",
-      "Build responsive React applications",
-      "Implement routing with React Router",
-      "Connect React apps to APIs",
-    ],
-    syllabus: [
-      "Week 1: Introduction to React",
-      "Week 2: Components and Props",
-      "Week 3: State and Lifecycle",
-      "Week 4: React Hooks",
-      "Week 5: Routing with React Router",
-      "Week 6: API Integration",
-      "Week 7: State Management",
-      "Week 8: Final Project",
-    ],
-  };
+  useEffect(() => {
+    const loadCourse = async () => {
+      try {
+        setLoading(true);
+        const data = await fetchCourseById(id);
+        setCourse(data);
+      } catch (err) {
+        setError('Failed to load course details.');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadCourse();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>Loading course details...</p>
+      </div>
+    );
+  }
+
+  if (error || !course) {
+    return (
+      <div className="error-container">
+        <h2>Course Not Found</h2>
+        <p>{error || 'The course you are looking for does not exist.'}</p>
+        <Link to="/" className="home-button">Back to Home</Link>
+      </div>
+    );
+  }
 
   return (
     <div className="course-details-page">
       <div className="course-details-header">
         <div className="header-content">
           <div>
+            <span className="course-category">{course.category}</span>
             <h1 className="course-details-title">{course.title}</h1>
             <p className="course-details-description">{course.description}</p>
           </div>
           <div className="course-price-section">
-            <div className="course-price">${course.price}</div>
+            <div className="course-price-D">${course.price}</div>
             <div className="price-label">One-time payment</div>
           </div>
         </div>
